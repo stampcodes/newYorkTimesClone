@@ -1,0 +1,13 @@
+.logoImg {
+  width: 500px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  margin: 50px;
+  align-items: flex-start;
+}
