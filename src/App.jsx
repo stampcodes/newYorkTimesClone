@@ -6,16 +6,16 @@ import Footer from "./components/Footer/Footer";
 const App = () => {
   const [articles, setArticles] = useState([]);
 
-  useEffect(() => {
-    const fetchArticles = async () => {
-      const apiKey = import.meta.env.VITE_NYT_API_KEY;
-      const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`);
-      const data = await response.json();
-      setArticles(data.results);
-    };
+  // useEffect(() => {
+  //   const fetchArticles = async () => {
+  //     const apiKey = import.meta.env.VITE_NYT_API_KEY;
+  //     const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`);
+  //     const data = await response.json();
+  //     setArticles(data.results);
+  //   };
 
-    fetchArticles();
-  }, []);
+  //   fetchArticles();
+  // }, []);
 
   
 

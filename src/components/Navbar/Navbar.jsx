@@ -1,5 +1,8 @@
 import styles from "../../styles/Navbar.module.css"
 import { FaSearch } from "react-icons/fa";
+import CustomMenu from "../Menu/CustomMenu";
+
+
 
 const Navbar = () => {
   return (
@@ -10,6 +13,7 @@ const Navbar = () => {
         <div> <FaSearch /> </div>
     </nav>
 
+      <CustomMenu />
     
     </>
   )
