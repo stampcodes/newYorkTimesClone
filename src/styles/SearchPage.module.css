@@ -44,4 +44,10 @@
   color: #666;
 }
 
+.LoadingIcon{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 

@@ -1,23 +1,16 @@
-import { useEffect, useState } from "react";
+import styles from "../styles/HomePage.module.css";
 import MainContent from "../components/MainContent/MainContent";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import { useHomeArticles } from "../hooks/useHomeArticles";
 
 const HomePage = () => {
-  const [articles, setArticles] = useState([]);
+  
 
-  useEffect(() => {
-    const fetchArticles = async () => {
-      const apiKey = import.meta.env.VITE_NYT_API_KEY;
-      const response = await fetch(
-        `https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`
-      );
-      const data = await response.json();
-      setArticles(data.results);
-    };
+  const { data: articles, isLoading, error } = useHomeArticles();
 
-    fetchArticles();
-  }, []);
+  if (isLoading) return <div className={styles.imgLoading}><img src="/loading.gif" alt="loading..." /></div>;
+  if (error) return <div>Error loading articles</div>;
 
   return (
     <>
