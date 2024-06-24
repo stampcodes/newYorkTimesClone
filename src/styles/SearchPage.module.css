@@ -1,0 +1,47 @@
+.form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto; /* Centra il form orizzontalmente */
+  position: relative;
+}
+
+.form input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #ccc; /* Bordo solo sotto */
+  background: none;
+  outline: none;
+  padding: 10px;
+  font-size: 24px; /* Dimensione del testo */
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.form input::placeholder {
+  color: #ccc;
+}
+
+.form input:focus {
+  border-bottom: 1px solid #333; /* Colore del bordo quando è attivo */
+}
+
+.form button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+.form button svg {
+  width: 20px;
+  height: 20px;
+  color: #666;
+}
+
+

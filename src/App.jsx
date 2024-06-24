@@ -1,30 +1,16 @@
-import { useEffect, useState } from "react";
-import MainContent from "./components/MainContent/MainContent";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import SearchPage from "./pages/SearchPage";
+
 
 const App = () => {
-  const [articles, setArticles] = useState([]);
-
-  // useEffect(() => {
-  //   const fetchArticles = async () => {
-  //     const apiKey = import.meta.env.VITE_NYT_API_KEY;
-  //     const response = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${apiKey}`);
-  //     const data = await response.json();
-  //     setArticles(data.results);
-  //   };
-
-  //   fetchArticles();
-  // }, []);
-
-  
-
   return (
-    <div className="app">
-      <Navbar />
-      <MainContent articles={articles} />
-      <Footer />
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/search" element={<SearchPage />} />
+      </Routes>
+    </>
   );
 };
 
