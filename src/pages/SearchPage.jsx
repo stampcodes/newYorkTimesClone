@@ -5,6 +5,7 @@ import SearchResult from "../components/SearchResult/SearchResult";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { useSearchArticles } from "../hooks/useSearchArticles";
+import loading from "../../src/assets/loading.gif"
 
 const SearchPage = () => {
   const [search, setSearch] = useState("");
@@ -31,7 +32,7 @@ const SearchPage = () => {
   if (isLoading)
     return (
       <div className={styles.LoadingIcon}>
-        <img src="/newYorkTimesClone/loading.gif" alt="loading..." />
+        <img src={loading} alt="loading..." />
       </div>
     );
   if (error) return <div>Error loading articles: {error.message}</div>;

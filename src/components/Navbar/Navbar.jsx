@@ -3,6 +3,7 @@ import styles from "../../styles/Navbar.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import CurrentDate from "../CurrentDate/CurrentDate";
+import logo from "../../assets/logo.png"
 
 const Navbar = () => {
   const location = useLocation();
@@ -35,7 +36,7 @@ const Navbar = () => {
         <div className={styles.navbar}>
           <img
             className={styles.logoImg}
-            src="/newYorkTimesClone/logo.png"
+            src={logo}
             sizes="300x300"
             alt="Logo New York Times"
           />
