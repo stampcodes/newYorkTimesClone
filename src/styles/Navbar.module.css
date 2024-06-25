@@ -1,7 +1,6 @@
 .logoImg {
   width: 500px;
   height: auto;
-  
 }
 
 .navbar {
@@ -14,9 +13,7 @@
   align-items: flex-start;
 }
 
-
-
-.searchAndDate{
+.searchAndDate {
   display: flex;
   justify-content: space-between;
   margin: 50px 50px 0px 50px;
@@ -30,7 +27,7 @@ button {
   border-radius: 5px;
 }
 
-button:hover{
+button:hover {
   background-color: lightgray;
 }
 
@@ -38,4 +35,19 @@ button svg {
   width: 20px;
   height: 20px;
   color: #666;
+}
+
+/* -------------------------- Mobile Styles ------------------- */
+@media only screen and (max-width: 400px) {
+  button {
+    padding: 1px;
+  }
+
+  .searchAndDate {
+    margin: 30px;
+  }
+
+  .logoImg {
+    width: 320px;
+  }
 }

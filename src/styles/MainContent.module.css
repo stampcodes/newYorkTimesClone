@@ -10,14 +10,13 @@
   padding-bottom: 30px;
   border-bottom: 1px solid #ccc;
   padding-top: 20px;
-  
+  justify-content: space-between;
 }
 
 .sectionRight {
   border-left: 1px solid #ccc;
   padding-left: 20px;
   padding-top: 20px;
- 
 }
 
 .imgSectionLeft {
@@ -37,21 +36,64 @@
   padding-bottom: 30px;
 }
 
-
-.articlesRight, .articlesLeft{
+.articlesRight,
+.articlesLeft {
   display: flex;
   flex-direction: column;
 }
 
-
-p { 
+p {
   margin-top: 15px;
   margin-right: 10px;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
   margin-right: 10px;
   margin-top: 12px;
 }
 
+/* ----------------------------Tablet Styles------------------- */
 
+@media only screen and (min-width: 401px) and (max-width: 1025px) {
+  .sectionRight {
+    display: none;
+  }
+
+  .sections {
+    display: flex;
+  }
+}
+
+/* -------------------------- Mobile Styles ------------------- */
+@media only screen and (max-width: 400px) {
+  .sectionRight {
+    display: none;
+  }
+
+  .sections {
+    display: flex;
+  }
+
+  .sectionLeft {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .imgSectionLeft {
+    width: auto;
+    height: 200px;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 20px;
+  }
+}

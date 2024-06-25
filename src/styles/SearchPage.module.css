@@ -44,10 +44,19 @@
   color: #666;
 }
 
-.LoadingIcon{
+.LoadingIcon {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+/* -------------------------- Mobile Styles ------------------- */
+@media only screen and (max-width: 400px) {
+  .form {
+    padding: 20px;
+  }
 
+  .form button {
+    margin-right: 10px;
+  }
+}
