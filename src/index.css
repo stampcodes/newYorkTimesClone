@@ -5,6 +5,27 @@
   
 }
 
+/* ----------- SCROLL BAR -------------*/
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: .25rem;
+}
+
+::-webkit-scrollbar-track {
+  background:  #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #202020;
+}
+
 body {
   font-family: "Georgia", serif;
   -webkit-user-select: none;
