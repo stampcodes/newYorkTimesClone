@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className={styles.navbar}>
           <img
             className={styles.logoImg}
-            src="/logo.png"
+            src="/newYorkTimesClone/logo.png"
             sizes="300x300"
             alt="Logo New York Times"
           />

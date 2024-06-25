@@ -10,7 +10,7 @@ const HomePage = () => {
   if (isLoading)
     return (
       <div className={styles.LoadingIcon}>
-        <img src="/loading.gif" alt="loading..." />
+        <img src="/newYorkTimesClone/loading.gif" alt="loading..." />
       </div>
     );
   if (error) return <div>Error loading articles</div>;
