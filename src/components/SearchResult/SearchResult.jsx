@@ -2,6 +2,7 @@ import styles from "../../components/SearchResult/SearchResult.module.css";
 
 const SearchResult = ({ article }) => {
   const baseUrl = "https://www.nytimes.com/";
+
   return (
     <>
       <div className={styles.container}>

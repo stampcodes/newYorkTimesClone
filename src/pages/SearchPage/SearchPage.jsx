@@ -5,20 +5,18 @@ import SearchResult from "../../components/SearchResult/SearchResult";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { useSearchArticles } from "../../hooks/useSearchArticles";
-import loading from "../../assets/loading.gif"
+import loading from "../../assets/loading.gif";
 import { Helmet } from "react-helmet-async";
-
 
 const SearchPage = () => {
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("");
 
   const {
-    data: articles, 
+    data: articles,
     mutate,
     isLoading,
     error,
-  } = useSearchArticles(query);
+  } = useSearchArticles(search);
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
@@ -26,24 +24,26 @@ const SearchPage = () => {
 
   const getSearch = (e) => {
     e.preventDefault();
-    setQuery(search);
     mutate(search);
     setSearch("");
   };
 
-  if (isLoading)
-    return (
+  {
+    isLoading && (
       <div className={styles.LoadingIcon}>
         <img src={loading} alt="loading..." />
       </div>
     );
-  if (error) return <div>Error loading articles: {error.message}</div>;
+  }
+  {
+    error && <div>Error loading articles: {error.message}</div>;
+  }
 
   return (
     <>
-    <Helmet>
-    <title>The New York Times - Search</title>
-    </Helmet>
+      <Helmet>
+        <title>The New York Times - Search</title>
+      </Helmet>
       <Navbar />
       <form className={styles.form} onSubmit={getSearch}>
         <input
