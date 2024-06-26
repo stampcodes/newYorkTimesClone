@@ -28,16 +28,13 @@ const SearchPage = () => {
     setSearch("");
   };
 
-  {
-    isLoading && (
+  if (isLoading)
+    return (
       <div className={styles.LoadingIcon}>
         <img src={loading} alt="loading..." />
       </div>
     );
-  }
-  {
-    error && <div>Error loading articles: {error.message}</div>;
-  }
+  if (error) return <div>Error loading articles</div>;
 
   return (
     <>
