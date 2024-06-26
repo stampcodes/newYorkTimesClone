@@ -1,4 +1,4 @@
-import styles from "../../../styles/MainContent.module.css";
+import styles from "../../../components/MainContent/MainContent.module.css";
 import ArticleRight from "./ArticleRight";
 
 const SectionRight = ({articles}) => {

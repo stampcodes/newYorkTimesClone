@@ -1,6 +1,6 @@
 import SectionLeft from "./SectionLeft/SectionLeft"
 import SectionRight from "./SectionRight/SectionRight"
-import styles from "../../styles/MainContent.module.css"
+import styles from "../../components/MainContent/MainContent.module.css"
 
 const MainContent = ({ articles }) => {
   return (

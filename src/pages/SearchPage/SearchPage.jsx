@@ -1,11 +1,11 @@
 import { FaSearch } from "react-icons/fa";
-import styles from "../styles/SearchPage.module.css";
+import styles from "../SearchPage/SearchPage.module.css";
 import { useState } from "react";
-import SearchResult from "../components/SearchResult/SearchResult";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
-import { useSearchArticles } from "../hooks/useSearchArticles";
-import loading from "../../src/assets/loading.gif"
+import SearchResult from "../../components/SearchResult/SearchResult";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import { useSearchArticles } from "../../hooks/useSearchArticles";
+import loading from "../../assets/loading.gif"
 import { Helmet } from "react-helmet";
 
 const SearchPage = () => {

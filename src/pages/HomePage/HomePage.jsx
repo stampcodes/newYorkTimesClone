@@ -1,9 +1,9 @@
-import styles from "../styles/HomePage.module.css";
-import MainContent from "../components/MainContent/MainContent";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
-import { useHomeArticles } from "../hooks/useHomeArticles";
-import loading from "../../src/assets/loading.gif"
+import styles from "../HomePage/HomePage.module.css";
+import MainContent from "../../components/MainContent/MainContent";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import { useHomeArticles } from "../../hooks/useHomeArticles";
+import loading from "../../assets/loading.gif"
 import { Helmet } from "react-helmet";
 
 const HomePage = () => {

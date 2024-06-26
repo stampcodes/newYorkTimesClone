@@ -1,10 +1,6 @@
-import styles from "../../../styles/MainContent.module.css";
+import styles from "../../../components/MainContent/MainContent.module.css";
 
 const ArticleLeft = ({ article }) => {
-
-
-
-
   return (
     <>
       <div className={styles.sectionLeft}>
@@ -14,9 +10,13 @@ const ArticleLeft = ({ article }) => {
         </section>
         <section>
           <a href={article.url} target="_blank" rel="noopener noreferrer">
-        <img className={styles.imgSectionLeft} src={article.multimedia[0]?.url} alt={article.multimedia[0]?.caption} />
-        </a>
-        <span>{article.byline}</span>
+            <img
+              className={styles.imgSectionLeft}
+              src={article.multimedia[0]?.url}
+              alt={article.multimedia[0]?.caption}
+            />
+          </a>
+          <span>{article.byline}</span>
         </section>
       </div>
     </>

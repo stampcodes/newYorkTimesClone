@@ -1,5 +1,5 @@
 import { FaSearch } from "react-icons/fa";
-import styles from "../../styles/Navbar.module.css";
+import styles from "../../components/Navbar/Navbar.module.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { IoIosArrowBack } from "react-icons/io";
 import CurrentDate from "../CurrentDate/CurrentDate";
