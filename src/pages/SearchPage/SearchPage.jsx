@@ -6,15 +6,16 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { useSearchArticles } from "../../hooks/useSearchArticles";
 import loading from "../../assets/loading.gif"
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 const SearchPage = () => {
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("sports");
+  const [query, setQuery] = useState("");
 
   const {
-    data: articles,
-    refetch,
+    data: articles, 
+    mutate,
     isLoading,
     error,
   } = useSearchArticles(query);
@@ -26,7 +27,7 @@ const SearchPage = () => {
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    refetch();
+    mutate(search);
     setSearch("");
   };
 

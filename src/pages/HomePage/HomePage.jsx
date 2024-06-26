@@ -4,7 +4,8 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import { useHomeArticles } from "../../hooks/useHomeArticles";
 import loading from "../../assets/loading.gif"
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 const HomePage = () => {
   const { data: articles, isLoading, error } = useHomeArticles();
