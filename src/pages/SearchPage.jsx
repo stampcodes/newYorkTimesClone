@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { useSearchArticles } from "../hooks/useSearchArticles";
 import loading from "../../src/assets/loading.gif"
+import { Helmet } from "react-helmet";
 
 const SearchPage = () => {
   const [search, setSearch] = useState("");
@@ -39,6 +40,9 @@ const SearchPage = () => {
 
   return (
     <>
+    <Helmet>
+    <title>The New York Times - Search</title>
+    </Helmet>
       <Navbar />
       <form className={styles.form} onSubmit={getSearch}>
         <input

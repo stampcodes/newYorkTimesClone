@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { useHomeArticles } from "../hooks/useHomeArticles";
 import loading from "../../src/assets/loading.gif"
+import { Helmet } from "react-helmet";
 
 const HomePage = () => {
   const { data: articles, isLoading, error } = useHomeArticles();
@@ -18,6 +19,9 @@ const HomePage = () => {
 
   return (
     <>
+    <Helmet>
+    <title>The New York Times - Home</title>
+    </Helmet>
       <Navbar />
       <MainContent articles={articles} />
       <Footer />
